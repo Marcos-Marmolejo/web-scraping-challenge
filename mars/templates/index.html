@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>marteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeees</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1>CONQUISTEMOS MARTE</h1>
+        <p>M                  A                  R          T       E</p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">lets go to the jungle!</a></p>
+      </div>
+        <img src="https://i.blogs.es/8afff8/marte-noticia-706394/450_1000.jpg" alt="Sloth">
+        <div class="row" id="mars-news">
+          <div class="col-md-12">
+              <h3>Mars News</h3>
+                <h4>{{vacation.news_title}}</h4>
+                    <p>{{vacation.news_p}}</p>
+          </div>
+        </div>
+        <br>  
+        <br>  
+        <br>  
+        <div class="col-md-6">
+              <p>imagen siuuuuuuuuuu!</p>
+              <img src="{{vacation.featured_image_url}}" alt="Sloth">
+        </div>
+        <div class="col-md-5">
+              <p>CONQUISTAMOS LA LUNA!</p>
+              <img src="https://media.giphy.com/media/ymMpuXSKGy9cA/giphy.gif" alt="Sloth">
+        </div>
+    </div>
+        <br>  
+        <br>  
+        <br>  
+    <div class="col-md-6">
+              <p>clima!</p>
+              <h4>InSight sol 455 (2020-03-08) low -95.4ºC (-139.8ºF) high -13.0ºC (8.5ºF)
+winds from the SSE at 6.0 m/s (13.5 mph) gusting to 20.7 m/s (46.2 mph)
+pressure at 6.40 hPa</h4>
+        </div>
+    <div class="col-md-5">
+              <p>tabla de información!</p>
+              <p>{{vacation.mars_facts | safe}}</p>
+        </div>
+
+       <div class ="row" id="mars-hemispheres">
+            <div class = "col-md-12">
+                <h3><center>Mars Hemispheres</center></h3>
+
+                {% for hemisphere in vacation.hemisphere_image_urls %}
+                    <div class = "col-md-6">
+                        <div class = "thumbnail">
+                            <img src = "{{hemisphere.image_url}}">
+                                <h3>{{hemisphere.title}}</h3>
+                            </div>
+                        </div>
+                {% endfor %}
+                    </div>
+
+            
+            </div>
+  </div>
+</body>
+
+</html>
